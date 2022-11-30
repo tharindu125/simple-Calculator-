@@ -1,10 +1,12 @@
 import './App.css';
-import form from './Pages/form';
+import Form from './Pages/Form';
+
+
 
 function App() {
   return (
     <div className="App">
-      <form/>
+      <Form/>
     </div>
   );
 }
