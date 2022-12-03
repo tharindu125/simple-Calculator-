@@ -1,7 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  
+  background-color: rgb(244, 179, 170);
+}
 
 .cal{
-    width: 320px;
-    margin: 100px auto;
+    width: 350px;
+    height: auto;
+    /* padding-left: 32rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem; */
+    padding: 15px 0px 15px 15px;
+    background-color: rgb(245, 111, 44);
+    margin-top: 0.6rem;
+    margin-left: 32rem;
+    
+    /* margin: 100px auto; */
+    /* border: 2px solid black;
+    border-radius: 10px; */
   
   }
   
@@ -9,27 +29,49 @@
     background-color: rgb(230, 223, 215);
     padding: 10px;
     font-size: 35px;
-    width: 295px;
-    height: 45px;
+    width: 305px;
+    height: 55px;
     text-align: right;
-    border: 3px solid rgb(44, 33, 55);    
+    border: 3px solid rgb(44, 33, 55); 
+    border-radius: 5px;  
   }
   
   .button{
     background-color: rgb(3, 3, 3);
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 110px;
     color: white;
     font-size: 30px;
     border: 1px solid rgb(98, 79, 79);
+    border-radius: 5px;
     float: left;
   }
   
   .button1{
     background-color: rgb(8, 8, 8);
-    height: 80px;
-    width: 160px;
+    height: 70px;
+    width: 110px;
     color: white;
     font-size: 30px;
     border: 1px solid rgb(98, 79, 79);
+    border-radius: 5px;
+  }
+
+  .main > span{
+    font-size: 55px;
+    display: grid;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;
+  }
+
+  .main > marquee{
+    font-size: large;
+    justify-content: left;
+    padding: 2px;
+    border: 2px solid rgb(198, 131, 84);
+    margin: 5px;
+    background-color: rgb(223, 159, 159);
+    font-weight: 600;
+
   }

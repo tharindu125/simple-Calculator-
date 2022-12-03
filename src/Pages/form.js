@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import "./App.css"
+import "../App.css"
 
 export default function Form() {
   const [result, setResult] = useState('');
@@ -9,7 +9,7 @@ export default function Form() {
     setResult(result.concat(event.target.value));
   };
 
-  const ClearDisply = () => {
+  const ClearDisplay = () => {
     setResult("");
   };
 
@@ -17,8 +17,22 @@ export default function Form() {
     setResult
     (eval(result).toString());
   };
+
+  
+    let time = new Date().toLocaleTimeString();
+    const [ctime, setCtime] = useState(time);
+
+    const UpdateTime = () => {
+      time = new Date().toLocaleTimeString();
+      setCtime(time);
+    };
+
+    setInterval(UpdateTime, 1000);
+
   return (
-    <div>
+    <div className='main'>
+      <span>Simple Calculater </span>
+      <marquee direction="right" behavior ="alternate">{ctime}</marquee>
       <div className='cal'>
         <input type="text" placeholder='0' id='answer' value={result}/>
         <input type="button" value={9} className="button" onClick={clickHandler}/>
@@ -39,9 +53,10 @@ export default function Form() {
         <input type="button" value="%" className="button" onClick={clickHandler}/>
         <input type="button" value="." className="button" onClick={clickHandler}/> 
 
-        <input type="button" value="clear" className="button1" onClick={ClearDisply}/>
+        <input type="button" value="clear" className="button1" onClick={ClearDisplay}/>
         <input type="button" value="=" className="button1" onClick={Calculate}/>
       </div>
+      
     </div>
   )
 }
